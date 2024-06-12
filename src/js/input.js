@@ -13,9 +13,7 @@ export function formSubmit() {
   
     input.value = '';
 
-    const data = await getWeather(cityQuery)
-    const parsed = await aggParse(data);
-    renderData(parsed)
+    getWeather(cityQuery)
   });
   
 }

@@ -75,6 +75,7 @@ button.celsius, button.fahrenheit {
     height: 40%;
     padding: 10px;
     border-radius: 5px;
+    gap: 15px;
 }
 
 .forecast-content {
