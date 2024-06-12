@@ -14,11 +14,8 @@ export function formSubmit() {
     input.value = '';
 
     const data = await getWeather(cityQuery)
-    const parsed = aggParse(data);
-    const parsedCelsius = parsed[0]
-    const parsedFahrenheit = parsed[1]
-
-    renderData(parsedCelsius, parsedFahrenheit)
+    const parsed = await aggParse(data);
+    renderData(parsed)
   });
   
 }
