@@ -124,4 +124,5 @@ button.celsius, button.fahrenheit {
 
 p#condition {
     align-self: center;
+    font-size: 0.9em;
 }
