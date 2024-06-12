@@ -1,8 +1,11 @@
 :root {
     --font-color: #ffc93c;
     --main-color: rgba(255, 154, 60, 1);
-    --elements-color: #ff6f3c;
-    --additional-color: rgba(21, 82, 99, 0.8);
+    --elements-color: rgba(255, 111, 60, 0.7);
+    --elements-background-color: rgba(175, 51, 5, 0.7);
+    --additional-color-buttons: rgba(49, 132, 155, 0.8);
+    --additional-color: rgba(19, 45, 53, 0.8);
+    --additional-background-color: rgba(21, 82, 99, 0.8);
   }
 
 * {
@@ -28,7 +31,7 @@ body {
 /* query */
 
 .query {
-    background-color: var(--main-color);
+    background-color: var(--additional-background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +42,18 @@ body {
 
 input#city-query {
     margin-bottom: 10px;
-    width: 300px;
+    padding: 5px;
+    width: 500px;
+    background-color: var(--additional-color);
+}
+
+button.celsius, button.fahrenheit {
+    border: none;
+    padding: 5px;
+    font-family: 'Custom', sans-serif;
+    font-weight: 600;
+    background-color: var(--additional-color-buttons);
+    width: 50px;
 }
 
 /* container */
@@ -53,7 +67,7 @@ input#city-query {
 }
 
 .main-content {
-    background-color: var(--additional-color);
+    background-color: var(--elements-background-color);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -105,6 +119,7 @@ input#city-query {
 .condition {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 p#condition {
