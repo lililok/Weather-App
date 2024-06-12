@@ -6,13 +6,15 @@
     <title>Weather</title>
 <script defer src="main.js"></script></head>
 <body>
-    <form id="city-query">
-        <input type="text" name="query" id="city-query" required>
-        <input type="submit" id="city-query" hidden>
-    </form>
-    <div class="buttons">
-        <button class="celsius">ºC</button>
-        <button class="fahrenheit">ºF</button>
+    <div class="query">
+        <form id="city-query">
+            <input type="text" name="query" id="city-query" placeholder="Your city" required>
+            <input type="submit" id="city-query" hidden>
+        </form>
+        <div class="buttons">
+            <button class="celsius">ºC</button>
+            <button class="fahrenheit">ºF</button>
+        </div>
     </div>
     <div class="container"></div>
 </body>
@@ -20,3 +22,6 @@
 
 
 
+<div class="condition">
+    
+</div>

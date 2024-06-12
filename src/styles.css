@@ -1,9 +1,112 @@
+:root {
+    --font-color: #ffc93c;
+    --main-color: rgba(255, 154, 60, 1);
+    --elements-color: #ff6f3c;
+    --additional-color: rgba(21, 82, 99, 0.8);
+  }
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Custom';
+    src: url('./assets/Mina-Regular.ttf') format('woff2');
+}
+
 body {
     width: 100%;
     height: 100vh;
+    background-image: url('./assets/tom-barrett-hgGplX3PFBg-unsplash.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Custom', sans-serif;
+    color: rgb(5, 18, 22)
+}
+
+/* query */
+
+.query {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 10%;
+}
+
+input#city-query {
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+/* container */
+
+.container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    background-color: var(--additional-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    height: 40%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.forecast-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.forecast {
+    background-color: var(--elements-color);
+    padding: 10px;
+}
+
+.forecast > p.weekday, #city {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.current-content {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.current#stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-self: center;
+    background-color: var(--elements-color);
+    padding: 10px;
+}
+
+.current#location {
+    text-align: center;
+    align-self: center;
+    background-color: var(--elements-color);
+    padding: 10px;
+}
+
+.condition {
+    display: flex;
+    flex-direction: row;
+}
+
+p#condition {
+    align-self: center;
 }
